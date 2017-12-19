@@ -1,14 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/growth_mindset/spec/models/project_spec.rb": [
+      "/Users/Guest/Desktop/growth_mindset/spec/models/progress_spec.rb": [
         1,
         null,
         1,
         2,
-        2,
-        null,
-        null,
         null
       ],
       "/Users/Guest/Desktop/growth_mindset/spec/rails_helper.rb": [
@@ -602,6 +599,27 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/growth_mindset/app/controllers/progresses_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/growth_mindset/app/controllers/projects_controller.rb": [
         1,
         null,
@@ -639,6 +657,12 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/growth_mindset/app/models/progress.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/growth_mindset/app/models/project.rb": [
         1,
         1,
@@ -656,6 +680,11 @@
         null,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/Guest/Desktop/growth_mindset/config/routes.rb": [
@@ -664,8 +693,18 @@
         null,
         1,
         null
+      ],
+      "/Users/Guest/Desktop/growth_mindset/spec/models/project_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1513642748
+    "timestamp": 1513704701
   }
 }

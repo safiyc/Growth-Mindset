@@ -5,4 +5,9 @@ FactoryBot.define do
     # action "do"
     # frequency "daily"
   end
+
+  factory :progress do
+    comment "This is a comment."
+    project_id 1
+  end
 end
