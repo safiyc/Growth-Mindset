@@ -1,0 +1,12 @@
+<%= simple_form_for @project do |f| %>
+  <%= f.input :name, label: "Project Name" %>
+  <%= f.input :desc, label: "Description" %>
+  <!-- <#%= f.input :action, collection: Project.actions, label: "Do Or Don't Do?" %>
+  <#%= f.input :frequency, collection: Project.frequencies, label: "How Frequent?" %> -->
+  <!-- <#%= f.input :action, as: :radio_buttons,
+  :collection => [[1, "Do"], [2, "Dont"]],
+  label: false %>
+  <#%= f.input :frequency, as: :radio_buttons,
+  :collection => [[1, "Great"], [2, "Okay"], [3, "Bad"]] %> -->
+  <%= f.button :submit %>
+<% end %>
