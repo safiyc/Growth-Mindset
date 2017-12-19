@@ -1,4 +1,4 @@
-class ProjectsController < ApplicationController
+class ProgressesController < ApplicationController
 
   def new
     @progress = Progress.new
@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
 
   private
 
-  def review_params
+  def progress_params
     params.require(:progress).permit(:comment)
   end
 
