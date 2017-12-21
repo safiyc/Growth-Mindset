@@ -1,13 +1,19 @@
 class ProjectsController < ApplicationController
   before_action :find_project, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit]
 
   def index
-    @projects = Project.all
+    if params[:category].blank?
+      # 'DESC' means decending order; new item is listed on top
+      @projects = Project.all.order("created_at DESC")
+    else
+      @category_id = Category.find_by(name: params[:category]).id
+      @projects = Project.where(:category_id => @category_id).order("created_at DESC")
+    end
   end
 
   def new
     @project = current_user.projects.build
-    # list categories by their names and ids
     @categories = Category.all.map{ |c| [c.name, c.id] }
   end
 

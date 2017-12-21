@@ -16,3 +16,136 @@
 
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
+
+.product {
+  height: 150px;
+  width: 150px;
+}
+
+.product-show {
+  height: 350px;
+  width: 350px;
+}
+
+.text-centered {
+  text-align: center
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 200;
+	text-transform: uppercase;
+}
+
+p.alert, p.notice {
+	margin: 0;
+}
+
+.navbar {
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+}
+.navbar-default {
+	background-color: #fff;
+	padding-bottom: 5px;
+	padding-top: 5px;
+
+	.navbar-nav > li > a {
+		color: #222;
+		&:hover {
+			color: darken(#bdbdbd, 5%);
+			transition: 0.5s;
+		}
+	}
+
+	.navbar-header {
+
+		.navbar-brand {
+			color: #edb544;
+			letter-spacing: 1.4px;
+			text-transform: uppercase;
+			font-size: 2.3em;
+			font-weight: bold;
+		}
+
+	}
+
+	.dropdown-menu > li > a:hover {
+		background-color: darken(#bdbdbd, 5%);
+		color: #fff;
+	}
+
+	.navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
+		background-color: darken(#bdbdbd, 5%);
+		color: #fff;
+	}
+
+}
+
+.dropdown-menu > .active > a {
+	background-color: #bdbdbd;
+	color: #fff;
+}
+
+.btn-custom {
+	color: darken(#bdbdbd, 5%);
+	background-color: #fff;
+	border: 1px solid darken(#bdbdbd, 5%);
+	padding: 8px 20px;
+	border-radius: 0px;
+	font-family: 'Lato', sans-serif;
+	&:hover {
+		text-decoration: none;
+		background-color: darken(#bdbdbd, 5%);
+		color: #fff;
+		transition: 0.5s;
+	}
+}
+
+.btn-custom2 {
+	color: #333;
+	background-color: #fff;
+	border: 1px solid #222;
+	padding: 8px 20px;
+	border-radius: 0px;
+	font-family: 'Lato', sans-serif;
+	&:hover {
+		text-decoration: none;
+		background-color: #333;
+		color: #fff;
+		transition: 0.5s;
+	}
+}
+
+.links {
+	.btn-custom {
+		padding: 3px 10px;
+		font-weight: 300;
+	}
+}
+
+.product-links {
+	.btn-custom {
+		padding: 3px 10px;
+		font-weight: 300;
+		margin-top: 40px;
+	}
+}
+
+.signup-form {
+	h2 {
+		margin-top: 0;
+		font-weight: bold;
+	}
+}
+
+.login-form {
+  h2 {
+		margin-top: 0;
+	}
+}
+
+// removes special characters from signup page bc of simple_form
+abbr[title="required"] {
+  display: none;
+}

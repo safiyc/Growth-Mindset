@@ -1,5 +1,7 @@
 class ProgressesController < ApplicationController
   before_action :find_project
+  before_action :find_progress, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit]
 
   def new
     @progress = Progress.new
@@ -8,6 +10,7 @@ class ProgressesController < ApplicationController
   def create
     @progress = Progress.new(progress_params)
     @progress.project_id = @project.id
+    @progress.user_id = current_user.id
 
     if @progress.save
       redirect_to project_path(@project)

@@ -5,7 +5,6 @@ class Project < ApplicationRecord
 
   validates :name, :desc, :presence => true
 
-# 'enum' allows only the values defined here for 'action' and 'frequency'; ex, ':do' is index 0
-  # enum action: [:do, :dont]
-  # enum frequency: [:daily, :weekly, :biweekly, :triweekly]
+  has_attached_file :image, styles: { project_index: "250x350>", project_show: "250x350>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 end
