@@ -1,0 +1,9 @@
+<div class="progress">
+  <p class="progress-comment"><%= progress.comment %></p>
+
+  <div class="links btn-group">
+    <%= link_to "Edit", edit_project_progress_path(progress.project, progress), class: 'btn btn_custom' %>
+    <%= link_to "Delete", project_progress_path(progress.project, progress),
+                      method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-custom" %>
+  </div>
+</div>

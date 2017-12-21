@@ -1,0 +1,9 @@
+<div class="col-md-10 col-md-offset-1">
+  <div class="edit-progress-form">
+    <h1>Edit Progress</h1>
+    <%= simple_form_for ([@project, @progress]) do |f| %>
+      <%= f.input :comment %>
+      <%= f.button :submit, class: "btn-custom2" %>
+    <% end %>
+  </div>
+</div>
