@@ -17,7 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.6'
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

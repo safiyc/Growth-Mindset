@@ -9,6 +9,36 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+  	<nav class="navbar navbar-default">
+  		<div class="container">
+  			<div class="navbar-header">
+          <% if current_user %>
+  				  <%= link_to "Projects", root_path, class: "navbar-brand" %>
+          <% end %>
+  			</div>
+
+  			<ul class="nav navbar-nav navbar-right">
+  				<% if current_user %>
+  					<li><%= current_user.name %> | <%= link_to "Sign Out", '/signout' %></li>
+  				<% else %>
+  					<li><%= link_to "Sign Up", '/signup' %> | <%= link_to "Sign in", '/signin' %></li>
+  				<% end %>
+  			</ul>
+
+  			<ul class="nav navbar-nav">
+  				<% if current_user %>
+  					<li><%= link_to "Add Project", new_project_path %></li>
+  				<% end %>
+  			</ul>
+  		</div>
+  	</nav>
+
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
+	<div class="container">
+  	<%= yield %>
+	</div>
+
+</body>
 </html>

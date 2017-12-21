@@ -1,6 +1,5 @@
 class ProgressesController < ApplicationController
   before_action :find_project
-  before_action :find_progress, only: [:edit, :update, :destroy]
 
   def new
     @progress = Progress.new
