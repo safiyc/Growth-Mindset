@@ -1,4 +1,7 @@
 FactoryBot.define do
+  factory :user do
+    
+  end
   factory :project do
     name "TestProject1"
     desc "This is the desc for TestProject1."

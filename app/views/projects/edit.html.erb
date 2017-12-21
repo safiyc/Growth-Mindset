@@ -1,6 +1,7 @@
 <h1>Edit Project</h1>
 
 <%= simple_form_for @project, html: { multipart: true } do |f| %>
+  <%= f.select :category_id, @categories %>
   <%= f.input :name, label: "Project" %>
   <%= f.input :desc, label: "Description" %>
   <%= f.button :submit %>

@@ -6,21 +6,32 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @project = Project.new
+    @project = current_user.projects.build
+    # list categories by their names and ids
+    @categories = Category.all.map{ |c| [c.name, c.id] }
   end
 
   def create
-    @project = Project.create!(project_params)
-    redirect_to root_path
+    @project = current_user.projects.build(project_params)
+    @project.category_id = params[:category_id]
+
+    if @project.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   def show
   end
 
   def edit
+    @categories = Category.all.map{ |c| [c.name, c.id] }
   end
 
   def update
+    @project.category_id = params[:category_id]
+
     if @project.update(project_params)
       redirect_to project_path(@project)
     else
@@ -36,7 +47,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :desc)
+    params.require(:project).permit(:name, :desc, :category_id)
   end
 
   def find_project

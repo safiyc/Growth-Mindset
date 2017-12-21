@@ -1,13 +1,17 @@
-<h1>This is the project show page.</h1>
-
 <%= @project.name %>
 <%= @project.desc %>
+<%= @project.category.name %>
 
-<%= link_to "Edit", edit_project_path(@project) %>
-<%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" } %>
+<div class="links btn-group">
+  <% if user_signed_in? %>
+    <% if @project.user_id == current_user.id %>
+      <%= link_to "Edit", edit_project_path(@project) %>
+      <%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
+  <% end %>
+</div>
 
 <h1>Progress Updates</h1>
 <%= link_to "Add Progress", new_project_progress_path(@project) %>
 <%= render @project.progresses %>
-
 <%= link_to "Home", projects_path %>
